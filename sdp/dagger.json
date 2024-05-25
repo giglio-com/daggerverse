@@ -1,0 +1,6 @@
+{
+  "name": "sdp",
+  "sdk": "typescript",
+  "source": ".",
+  "engineVersion": "v0.11.1"
+}
