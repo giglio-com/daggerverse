@@ -1,0 +1,13 @@
+---
+schema:
+  type: object
+  properties:
+    namespace:
+      type: string
+      description: Namespace for hello-dagger.
+    strategy:
+      type: string
+      description: Strategy for the configuration, in this case a Dockerfile.
+  required:
+    - namespace
+    - strategy

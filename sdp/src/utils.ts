@@ -1,5 +1,11 @@
-export function fileExists(matches: string[], searchElement: string) {
-  if (matches.indexOf(searchElement) < 0) {
-    throw new Error(`${searchElement} does not exist`);
+import { Directory } from "@dagger.io/dagger";
+
+export async function patternMatchOrThrowException(
+  directory: Directory,
+  pattern: string,
+): Promise<void> {
+  const results: string[] = await directory.glob(pattern);
+  if (results.length === 0) {
+    throw Error(`${pattern} does not exist`);
   }
 }
